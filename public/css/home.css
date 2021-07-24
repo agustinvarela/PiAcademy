@@ -1,0 +1,279 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--negro);
+}
+
+
+/*  Hero  */
+
+.hero{
+    height: auto;
+    max-width: 100vw;
+    background-image: url(/img/axie24.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    font-family: 'raleway';
+    background-attachment: fixed;
+}
+
+.hero-content{
+    padding: 6em 7.5% 30vh 7.5%;
+    color: white;
+}
+
+.hero-content h1{
+    text-transform: uppercase;
+    font-size: 6em;
+    letter-spacing: .1em;
+    font-weight: bolder;
+    margin: 0;
+    margin-bottom: .2em;
+}
+
+.hero-content p{
+    font-family: 'roboto';
+    font-style:  italic;
+    color: white;
+    font-size: 2em;
+    margin-bottom: 2em;
+    font-weight: 300;
+}
+
+.hero-content a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: .75em .75em;
+    border: 1px solid white;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.hero-content a:hover{
+    color: white;
+    border-color: white;
+}
+
+
+/*  Mision  */
+
+.mision{
+    height: 100vh;
+    max-width: 100vw;
+    background-color: rgb(241, 241, 241);
+    
+}
+
+
+
+.mision-content-left{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 7.5vw
+}
+
+.top-text{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.bottom-text{
+    text-align: center;
+}
+
+.mision-content-left h2{
+    color: var(--gris-oscuro);
+    font-family: 'raleway';
+    font-size: 5vh;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    border-bottom: 3px solid #008F9F;
+    padding: .25em 1em;
+}
+
+.mision-content-left p{
+    font-size: 2vh;
+    font-family: 'roboto';
+    color: var(--gris-oscuro);
+    font-weight: 400;
+    text-align: justify;
+    padding: 1em 0;
+    line-height: 1.5em;
+    font-style: normal;
+}
+
+.mision-content-left a{
+    all: unset;
+    color: #008F9F;
+    padding: .5em;
+    border: 1px solid #008F9F;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    font-family: 'raleway';
+    font-weight: 600;
+}
+
+.mision-content-left a:hover{
+    color: #f38499;
+    border-color: #f38499;
+}
+
+.mision-container{
+    max-width: 45vw;
+}
+
+/*  Carrusel  */
+
+
+.carrusel{
+    height: 50vh;
+    max-width: 100vw;
+    background-image: url(/img/axie18.jpg);
+    background-size: cover;
+}
+
+.swiper-container {
+    min-width:800px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+  }
+
+
+:root {
+    --swiper-theme-color: rgba(255, 255, 255, 0.6);
+}
+
+.swiper-slide{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 0 15.5%;
+   text-align: center;
+   color: white;
+   
+}
+.swiper-slide h3{
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    font-family: 'roboto';
+    font-style: italic;
+    font-weight: 200;
+    line-height: 1.5em;
+}
+
+.swiper-slide p{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'raleway';
+    font-weight: bolder;
+    letter-spacing: .1em;
+}
+
+@media (max-width: 1024px) {
+    /*Hero*/
+    .hero-content{
+        padding: 4em 7.5% 20vh 7.5%;
+    }
+
+    .hero h1{
+        font-size:3.5em;
+    }
+
+    .hero p{
+        font-size: 1.5em;
+    }
+
+    .hero a{
+        font-size: 1.5em;
+    }
+
+    
+    /*Mision*/
+    .mision{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+
+    .mision-content-right{
+        display: none;
+    }
+
+    .mision-content-left{
+        width: 100%;
+    }
+
+    .mision-container{
+        max-width: 80vw;
+    }
+
+    /*Carrusel*/
+    .swiper-container {
+        min-width:400px;
+        width: 95%;
+        height: 100%;
+        display: flex;
+      }
+
+      .swiper-container h3{
+          font-size: 1.5em;
+      }
+
+      .swiper-container p{
+          font: 1em;
+      }
+
+      .swiper-button-next,.swiper-button-prev{
+        display: none;
+      }
+
+    }
+
+    @media (max-width: 760px){
+        .hero-content h1{
+            font-size: 2.5em;
+        }
+
+        .hero-content{
+            text-align: center;
+        }
+
+        .hero-content a{
+            font-size: 1.25em;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .hero-content h1{
+            font-size: 9vw;
+        }
+
+        .carrusel{
+            display: none;
+        }
+
+        a.cta-hero{
+            font-size: 5vw;
+        }
+
+        .mision-content-left{
+            padding: 7.5%;
+        }
+
+        .mision-container h2{
+            font-size: 1.5em;
+        }
+    }
